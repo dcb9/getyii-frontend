@@ -34,12 +34,11 @@ class PostSearch extends Post
 
     /**
      * @param $params
-     * @param array $conditions
      * @return ActiveDataProvider
      */
-    public function search($params, $conditions = [])
+    public function search($params)
     {
-        $query = Post::find()->where($conditions);
+        $query = Post::find();
 
         // 如果有无人区节点 帖子列表过滤无人区节点的帖子
         if (PostMeta::noManLandId() && (empty($params['PostSearch']['post_meta_id']) || $params['PostSearch']['post_meta_id'] != PostMeta::noManLandId())) {
