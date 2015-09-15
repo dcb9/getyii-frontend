@@ -29,27 +29,27 @@ return [
     'Development' => [
         'path' => 'dev',
         'setWritable' => [
-            'frontend/runtime',
-            'frontend/web/assets',
+            'runtime',
+            'web/assets',
         ],
         'setExecutable' => [
             'yii',
         ],
         'setCookieValidationKey' => [
-            'frontend/config/main-local.php',
+            'config/main-local.php',
         ],
     ],
     'Production' => [
         'path' => 'prod',
         'setWritable' => [
-            'frontend/runtime',
-            'frontend/web/assets',
+            'runtime',
+            'web/assets',
         ],
         'setExecutable' => [
             'yii',
         ],
         'setCookieValidationKey' => [
-            'frontend/config/main-local.php',
+            'config/main-local.php',
         ],
     ],
 ];
