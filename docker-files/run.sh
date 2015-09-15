@@ -3,9 +3,10 @@
 set -e -x 
 
 cd /app
+cp docker-files/app.conf /etc/nginx/conf.d/
 composer install --prefer-dist --no-interaction --optimize-autoloader
 ./init --env=${APP_ENV:-Production} --overwrite=y
-./yii migrate --interactive=0
+./yii migrate --migrationPath=common/migrations --interactive=0
 
 function setEnvironmentVariable() {
     if [ -z "$2" ]; then

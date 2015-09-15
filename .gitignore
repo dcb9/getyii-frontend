@@ -1,2 +1,7 @@
 /vendor
 /docker-compose.yml
+/yii
+/docker-files/app.conf
+/supervisord.log
+/supervisord.pid
+/.idea
